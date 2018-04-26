@@ -39,7 +39,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres:///my_awesome_project'),
+    'default': env.db('DATABASE_URL', default='postgres:///nomadcoders'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
@@ -72,6 +72,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     'my_awesome_project.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'my_awesome_project.images.apps.ImagesConfig'
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
