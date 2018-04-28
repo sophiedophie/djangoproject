@@ -183,7 +183,8 @@ module.exports = {
                         importLoaders: 1,
                         minimize: true,
                         sourceMap: shouldUseSourceMap,
-                        modules: true
+                        modules: true,
+                        camelCase: "dashes"
                       },
                     },
                     {
@@ -208,7 +209,8 @@ module.exports = {
                     },{
                       loader: require.resolve('sass-loader'),
                       options: {
-                        sourcemap: true
+                        sourcemap: true,
+                        // data: `@ import "${paths.appSrc}/config/_variables.scss";`
                       }
                     }
                   ],
